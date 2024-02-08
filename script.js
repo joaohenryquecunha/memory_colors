@@ -78,6 +78,8 @@ function checkInput() {
 
 // End the game
 function endGame() {
+  rankingBody.style.display = 'flex';
+  divTable.style.display = 'flex';
   message.textContent = 'Game Over!';
   startBtn.disabled = false;
   startBtn.textContent = 'Restart Game';
@@ -86,9 +88,9 @@ function endGame() {
   if (ranking.length > 10) {
     ranking = ranking.slice(0, 10);
   }
-  divTable.style.display = 'none';
   localStorage.setItem('ranking', JSON.stringify(ranking));
   updateRanking();
+ 
 }
 
 // Update ranking table
