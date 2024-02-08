@@ -87,8 +87,8 @@ function endGame() {
     ranking = ranking.slice(0, 10);
   }
   localStorage.setItem('ranking', JSON.stringify(ranking));
-  rankingBody.style.display = 'block';
-  divTable.style.display = 'block';
+  rankingBody.style.display = '';
+  divTable.style.display = '';
   updateRanking();
  
 }
